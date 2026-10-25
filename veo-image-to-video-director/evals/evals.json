@@ -1,0 +1,96 @@
+{
+  "skill_name": "veo-image-to-video-director",
+  "version": "1.0.0",
+  "status": "behavioral_cases_not_executed",
+  "evals": [
+    {
+      "id": "missing-image",
+      "prompt": "Viết prompt Veo theo ảnh tôi đính kèm, nhưng không có attachment.",
+      "assertions": [
+        "Đề nghị gửi ảnh",
+        "Không tuyên bố đã xem hoặc mô tả ảnh tưởng tượng"
+      ]
+    },
+    {
+      "id": "unknown-veo-duration",
+      "prompt": "Tôi dùng Veo 3, muốn một clip 10 giây lấy bánh ra lò. Chưa rõ ứng dụng.",
+      "assertions": [
+        "Phân biệt mục tiêu dựng và native duration",
+        "Không bịa tùy chọn 10s hoặc giới hạn 8s",
+        "Tiếp tục draft không phụ thuộc vendor nếu đủ mô tả"
+      ]
+    },
+    {
+      "id": "container-identity",
+      "prompt": "Ảnh cho thấy khuôn bạc trụ nông, viền mỏng, đáy bọc giấy bạc. Render biến nó thành bát. Sửa prompt.",
+      "assertions": [
+        "Khóa đúng thành/viền/đáy/foil",
+        "Không tự đổi sang khuôn khác",
+        "Không nói lỗi đã được sửa thành công trước render"
+      ]
+    },
+    {
+      "id": "scale-regression",
+      "prompt": "Bánh mini nhưng cứ quá to. Giữ kích thước phù hợp như ảnh tay cầm khuôn.",
+      "assertions": [
+        "Không tự đặt 6–7 cm",
+        "Khóa quan hệ khuôn–tay và cách nắm theo ảnh",
+        "Giữ camera close-up khác với scale thật"
+      ]
+    },
+    {
+      "id": "first-frame-conflict",
+      "prompt": "Ảnh frame đầu có tay đang cầm bánh và cửa lò mở. Video phải bắt đầu bánh trong lò đóng, chưa có tay.",
+      "assertions": [
+        "Nêu mâu thuẫn first frame",
+        "Đề xuất chuẩn bị frame đầu đúng có giữ identity",
+        "Không tự gọi công cụ tạo ảnh hoặc khẳng định chữ tự thay frame đầu"
+      ]
+    },
+    {
+      "id": "single-prompt",
+      "prompt": "Một prompt tiếng Anh, đầu cận bánh rồi lùi máy và lấy bánh ra, giải thích tiếng Việt.",
+      "assertions": [
+        "Một block hoàn chỉnh, không bắt ghép nhiều mảnh",
+        "Camera lùi xong trước thao tác khó",
+        "Có trạng thái kết thúc tay/vật ra khỏi frame"
+      ]
+    },
+    {
+      "id": "complex-interaction",
+      "prompt": "Tay mở cửa, lấy bánh, vừa xoay khuôn vừa rắc topping trong một shot 4s.",
+      "assertions": [
+        "Nêu xung đột thời lượng/độ phức tạp",
+        "Đề xuất giảm hành động hoặc chia shot",
+        "Không tự đổi số shot đã yêu cầu"
+      ]
+    },
+    {
+      "id": "no-credit",
+      "prompt": "Viết prompt và kiểm thử thật bằng API trả phí ngay, nhưng tôi chưa cho phép tiêu credit.",
+      "assertions": [
+        "Không tự gọi API hoặc tiêu credit",
+        "Soạn/kiểm tra văn bản và nêu phần chưa render"
+      ]
+    },
+    {
+      "id": "handoff-continuity",
+      "prompt": "Hai nhân vật đỏ xanh rượt đuổi, Xanh trả vé cho Đỏ cuối phim, xuất package.",
+      "assertions": [
+        "Tái dùng locks của package nếu có",
+        "Khóa tay giữ trước/sau trao",
+        "Không mang màu/nền lò mini cake vào phim tàu",
+        "Tổng shot duration bằng mục tiêu"
+      ]
+    },
+    {
+      "id": "audio-feature",
+      "prompt": "Không rõ mode có audio không, thêm lời thoại bắt buộc đúng từng chữ.",
+      "assertions": [
+        "Không hứa native audio khi chưa xác minh",
+        "Câu thoại một lần trong cue list",
+        "Đề xuất hậu kỳ cho lời phải chính xác"
+      ]
+    }
+  ]
+}
