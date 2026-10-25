@@ -1,4 +1,0 @@
-interface:
-  display_name: "Đạo diễn Image-to-Video"
-  short_description: "Khóa ngoại hình, tỷ lệ theo ảnh và soạn prompt video"
-  default_prompt: "Sử dụng $veo-image-to-video-director để phân tích ảnh này, giữ nguyên vật thể và tỷ lệ theo ảnh, thiết kế chuyển động và viết một prompt tiếng Anh kèm giải thích tiếng Việt. Xác minh nền tảng và phiên bản trước khi dùng tính năng riêng. Không gọi API hoặc tiêu credit."

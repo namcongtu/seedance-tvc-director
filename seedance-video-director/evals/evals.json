@@ -1,0 +1,114 @@
+{
+  "skill_name": "seedance-video-director",
+  "version": "2.0.0",
+  "default_duration_seconds": 15,
+  "status": "behavioral_cases_not_executed",
+  "evals": [
+    {
+      "id": "default-15",
+      "prompt": "Làm prompt một cuộc rượt đuổi hoạt hình, bạn chọn nhịp.",
+      "assertions": [
+        "Mặc định mục tiêu dựng 15 giây",
+        "Không hỏi lại chỉ để xác nhận thời lượng mặc định",
+        "Prompt tiếng Anh, giải thích tiếng Việt"
+      ]
+    },
+    {
+      "id": "duration-override",
+      "prompt": "Tạo phim thiên nhiên 30 giây.",
+      "assertions": [
+        "Giữ 30 giây thay vì ép 15",
+        "Không khẳng định native 30 giây chưa xác minh"
+      ]
+    },
+    {
+      "id": "text-only",
+      "prompt": "Tôi chỉ có ý tưởng một phi hành gia gặp mèo trong trạm không gian.",
+      "assertions": [
+        "Không bắt buộc ảnh",
+        "Thiết kế silhouette và luật không gian từ brief",
+        "Không nói đã nhìn ảnh"
+      ]
+    },
+    {
+      "id": "image-missing",
+      "prompt": "Phân tích ảnh đính kèm để giữ ngoại hình, nhưng tôi chưa gửi ảnh.",
+      "assertions": [
+        "Yêu cầu ảnh để phân tích",
+        "Không bịa ngoại hình"
+      ]
+    },
+    {
+      "id": "platform-unknown",
+      "prompt": "Tôi dùng Seedance, không rõ phiên bản, muốn âm thanh và nhiều reference.",
+      "assertions": [
+        "Không bịa phiên bản hoặc khả năng",
+        "Tiếp tục draft nếu đủ brief",
+        "Phân biệt 15s dựng và native"
+      ]
+    },
+    {
+      "id": "object-lock",
+      "prompt": "Ảnh đồng hồ tròn bạc, render đổi thành vuông. Hãy sửa.",
+      "assertions": [
+        "Khóa cấu trúc theo ảnh",
+        "Giữ lớp đã đạt",
+        "Không tuyên bố đã sửa render thành công"
+      ]
+    },
+    {
+      "id": "scale",
+      "prompt": "Ảnh người đứng cạnh xe, render làm người to bằng xe.",
+      "assertions": [
+        "Khóa tỷ lệ người–xe từ ảnh",
+        "Không tự đặt số cm",
+        "Phân biệt camera và kích thước thật"
+      ]
+    },
+    {
+      "id": "first-frame",
+      "prompt": "Ảnh nhân vật đứng yên, tôi muốn frame đầu đang bay qua khe.",
+      "assertions": [
+        "Nêu mâu thuẫn",
+        "Đề xuất chuẩn bị frame đúng",
+        "Không tự tạo ảnh khi chỉ được xin prompt"
+      ]
+    },
+    {
+      "id": "single-prompt",
+      "prompt": "Một prompt 15 giây thời trang, bước đi tự nhiên, camera tracking.",
+      "assertions": [
+        "Một block hoàn chỉnh",
+        "Đúng thể loại thời trang",
+        "Không thêm packshot hoặc thoại tùy tiện"
+      ]
+    },
+    {
+      "id": "fantasy",
+      "prompt": "Rồng bay không trọng lực trong thế giới đảo nổi.",
+      "assertions": [
+        "Giữ luật fantasy đã yêu cầu",
+        "Không sửa thành vật lý hiện thực trái brief",
+        "Camera và hướng bay nhất quán"
+      ]
+    },
+    {
+      "id": "handoff",
+      "prompt": "Hoạt hình hài, nhân vật Xanh trả vé cho Đỏ cuối clip.",
+      "assertions": [
+        "Khóa tay sở hữu trước/sau trao",
+        "Có trigger rồi phản ứng",
+        "Không gán thiết kế từ dự án khác nếu chưa được yêu cầu"
+      ]
+    },
+    {
+      "id": "no-credit",
+      "prompt": "Viết production package đa shot; chưa render.",
+      "assertions": [
+        "Không API hoặc tiêu credit",
+        "Tổng thời lượng mặc định 15 nếu chưa nêu",
+        "Reference chưa tạo không gọi đã duyệt"
+      ]
+    }
+  ]
+}

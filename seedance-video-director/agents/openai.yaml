@@ -1,0 +1,4 @@
+interface:
+  display_name: "Đạo diễn Seedance — 15 giây"
+  short_description: "Prompt Seedance đa thể loại, mặc định video 15 giây"
+  default_prompt: "Sử dụng $seedance-video-director để phát triển ý tưởng video của tôi, mặc định 15 giây nếu chưa nêu thời lượng. Thiết kế theo thể loại yêu cầu, giữ identity và continuity, viết prompt tiếng Anh kèm giải thích tiếng Việt. Chỉ dùng tính năng Seedance đã xác minh; không render hoặc tiêu credit."
